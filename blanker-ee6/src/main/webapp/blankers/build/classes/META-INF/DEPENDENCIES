@@ -1,0 +1,35 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Blank Webapp
+
+
+From: 'an unknown organization'
+  - FreeMarker (http://freemarker.org) org.freemarker:freemarker:jar:2.3.16
+    License: BSD-style license  (http://freemarker.org/LICENSE.txt)
+
+From: 'Apache Software Foundation' (http://www.apache.org)
+  - Struts 2 Core (http://struts.apache.org/struts2/struts2-core) org.apache.struts:struts2-core:jar:2.2.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - XWork: Core (http://struts.apache.org/struts2/xwork-core) org.apache.struts.xwork:xwork-core:jar:2.2.1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'OpenSymphony' (http://www.opensymphony.com)
+  - OGNL - Object Graph Navigation Library (http://ognl.org) ognl:ognl:jar:3.0
+
+
+From: 'Shigeru Chiba / JBoss' (http://labs.jboss.com/javassist/)
+  - Javassist (http://labs.jboss.com/javassist/) jboss:javassist:jar:3.7.ga
+    License: MPL 1.1  (http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/*checkout*/jboss/javassist/License.html?rev=HEAD&content-type=text/html)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Commons FileUpload (http://commons.apache.org/fileupload/) commons-fileupload:commons-fileupload:jar:1.2.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Commons IO (http://jakarta.apache.org/commons/io/) commons-io:commons-io:jar:1.3.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

@@ -1,0 +1,96 @@
+Feb 03, 2015 10:14:05 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+Feb 03, 2015 10:14:06 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+Feb 03, 2015 10:14:06 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+Feb 03, 2015 10:14:08 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'tomee.remote.support=true'
+Feb 03, 2015 10:14:08 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.jdbc.datasource-creator=org.apache.tomee.jdbc.TomEEDataSourceCreator'
+Feb 03, 2015 10:14:08 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: ********************************************************************************
+Feb 03, 2015 10:14:08 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: OpenEJB http://openejb.apache.org/
+Feb 03, 2015 10:14:08 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Startup: Tue Feb 03 22:14:08 MYT 2015
+Feb 03, 2015 10:14:08 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Copyright 1999-2013 (C) Apache OpenEJB Project, All Rights Reserved.
+Feb 03, 2015 10:14:08 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Version: 4.7.1
+Feb 03, 2015 10:14:08 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Build date: 20140912
+Feb 03, 2015 10:14:08 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: Build time: 01:43
+Feb 03, 2015 10:14:08 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: ********************************************************************************
+Feb 03, 2015 10:14:08 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: openejb.home = /home/khomeini/workspace/blanker-ee6/target/apache-tomee
+Feb 03, 2015 10:14:08 PM org.apache.openejb.OpenEJB$Instance <init>
+INFO: openejb.base = /home/khomeini/workspace/blanker-ee6/target/apache-tomee
+Feb 03, 2015 10:14:08 PM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFO: Created new singletonService org.apache.openejb.cdi.ThreadSingletonServiceImpl@27144c1b
+Feb 03, 2015 10:14:08 PM org.apache.openejb.cdi.CdiBuilder initializeOWB
+INFO: Succeeded in installing singleton service
+Feb 03, 2015 10:14:08 PM org.apache.openejb.config.ConfigurationFactory init
+INFO: openejb configuration file is '/home/khomeini/workspace/blanker-ee6/target/apache-tomee/conf/tomee.xml'
+Feb 03, 2015 10:14:09 PM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=Tomcat Security Service, type=SecurityService, provider-id=Tomcat Security Service)
+Feb 03, 2015 10:14:09 PM org.apache.openejb.config.ConfigurationFactory configureService
+INFO: Configuring Service(id=Default Transaction Manager, type=TransactionManager, provider-id=Default Transaction Manager)
+Feb 03, 2015 10:14:09 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.system.apps=false'
+Feb 03, 2015 10:14:09 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'openejb.deployments.classpath=false'
+Feb 03, 2015 10:14:09 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating TransactionManager(id=Default Transaction Manager)
+Feb 03, 2015 10:14:09 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating SecurityService(id=Tomcat Security Service)
+Feb 03, 2015 10:14:09 PM org.apache.openejb.server.ServiceManager initServer
+INFO: Creating ServerService(id=cxf)
+Feb 03, 2015 10:14:09 PM org.apache.openejb.server.ServiceManager initServer
+INFO: Creating ServerService(id=cxf-rs)
+Feb 03, 2015 10:14:09 PM org.apache.openejb.server.SimpleServiceManager start
+INFO:   ** Bound Services **
+Feb 03, 2015 10:14:09 PM org.apache.openejb.server.SimpleServiceManager printRow
+INFO:   NAME                 IP              PORT  
+Feb 03, 2015 10:14:09 PM org.apache.openejb.server.SimpleServiceManager start
+INFO: -------
+Feb 03, 2015 10:14:09 PM org.apache.openejb.server.SimpleServiceManager start
+INFO: Ready!
+Feb 03, 2015 10:14:09 PM org.apache.openejb.util.OptionsLog info
+INFO: Using 'tomee.noshutdownhook=true'
+Feb 03, 2015 10:14:09 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 5570 ms
+Feb 03, 2015 10:14:09 PM org.apache.tomee.catalina.OpenEJBNamingContextListener bindResource
+INFO: Importing a Tomcat Resource with id 'UserDatabase' of type 'org.apache.catalina.UserDatabase'.
+Feb 03, 2015 10:14:09 PM org.apache.openejb.assembler.classic.Assembler createRecipe
+INFO: Creating Resource(id=UserDatabase)
+Feb 03, 2015 10:14:09 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+Feb 03, 2015 10:14:09 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat (TomEE)/7.0.55 (1.7.1)
+Feb 03, 2015 10:14:10 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Feb 03, 2015 10:14:10 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Feb 03, 2015 10:14:10 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 230 ms
+Feb 03, 2015 10:16:18 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Feb 03, 2015 10:16:18 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+Feb 03, 2015 10:16:19 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+Feb 03, 2015 10:16:19 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+Feb 03, 2015 10:16:19 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+Feb 03, 2015 10:16:19 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+Feb 03, 2015 10:16:19 PM org.apache.openejb.server.SimpleServiceManager stop
+INFO: Stopping server services
+Feb 03, 2015 10:16:19 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+Feb 03, 2015 10:16:19 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]

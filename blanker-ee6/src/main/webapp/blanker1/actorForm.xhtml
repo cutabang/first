@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+</h:head>
+<h:body>
+
+<!-- 	<s:include  value="/general/top.jsp"></s:include> -->
+
+<!-- <s:form action="personAction" > -->
+<!--     <s:textfield key="person.name" /> -->
+<!--     <s:textfield key="person.phone"/> -->
+<!--     <s:textfield key="person.money" value="%{getText('person.money.format',{person.money})}"/> -->
+<!--     <s:textfield key="person.email"/> -->
+<!--     <s:select key="person.sport" list="sports" /> -->
+<!--     <s:select list="languages" key="language" name="request_locale"></s:select> -->
+<!--     <s:checkbox key="person.graduated" /> -->
+<!--     <s:submit key="submit" align="right"/> -->
+<!-- </s:form> -->
+
+<h:form>
+    First Name : <h:inputText value="#{actorInputForm.actor.firstName}" />
+    Last Name : <h:inputText value="#{actorInputForm.actor.lastName}" />
+    <h:commandButton action="#{actorInputForm.registerActor}" value="Register" />
+</h:form>
+
+    
+<hr/>
+</h:body>
+</html>

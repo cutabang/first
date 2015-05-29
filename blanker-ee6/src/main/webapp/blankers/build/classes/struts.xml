@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <!-- <constant name="struts.enable.DynamicMethodInvocation" value="false" /> -->
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.action.extension" value="action,do,shtml"/> 
+    <!-- <constant name="struts.locale" value="es_ES" /> -->
+    <constant name="struts.multipart.saveDir" value="fileTempDir" />
+
+    <!-- <include file="example.xml"/> -->
+    
+    <package name="home" namespace="/" extends="struts-default">
+        <action name="home">
+           <result>/index.html</result>
+        </action>
+    </package>
+    
+    <package name="one" namespace="/blanker1" extends="struts-default">
+       <interceptors> 
+         <interceptor-stack name="appDefault"> 
+            <interceptor-ref name="timer" /> 
+            <interceptor-ref name="logger" /> 
+            <interceptor-ref name="defaultStack" /> 
+         </interceptor-stack> 
+       </interceptors> 
+
+       <default-interceptor-ref name="appDefault" /> 
+             
+       <action name="formInput" class="action.blanker1.PersonAction" method="input"> <!-- this action is used to load properties file -->
+          <result name="input">/blanker1/personForm.jsp</result>
+        </action>
+        
+        <action name="personAction" class="action.blanker1.PersonAction">
+           <result name="success">/blanker1/submissionResult.jsp</result>
+           <result name="input">/blanker1/personForm.jsp</result>
+        </action>
+        
+        <!-- <action name="addressInput" class="action.blanker1.AddressAction" method="input">
+           <result name="input">/addressForm.jsp</result>
+        </action>
+         -->
+    </package>
+    
+    <package name="two" namespace="/blanker2" extends="struts-default">
+       <interceptors> 
+         <interceptor-stack name="appDefault"> 
+            <interceptor-ref name="timer" /> 
+            <interceptor-ref name="logger" /> 
+            <interceptor-ref name="defaultStack" /> 
+         </interceptor-stack> 
+       </interceptors> 
+
+       <default-interceptor-ref name="appDefault" /> 
+             
+       <action name="formInput" class="action.blanker2.PersonAction" method="input">
+          <result name="input">/blanker2/personForm.jsp</result>
+        </action>
+        
+        <action name="personAction" class="action.blanker2.PersonAction">
+           <result name="success" type="redirectAction">
+               <param name="actionName">addressInput</param>
+           </result>
+           <result name="input">/blanker2/personForm.jsp</result>
+        </action>
+        
+        <action name="addressInput" class="action.blanker2.AddressAction" method="input">
+           <result name="input">/blanker2/addressForm.jsp</result>
+        </action>
+        
+    </package>
+
+    <package name="three" namespace="/blanker3" extends="struts-default">
+       
+       <interceptors> 
+         <interceptor-stack name="appDefault"> 
+            <interceptor-ref name="timer" /> 
+            <interceptor-ref name="logger" /> 
+            <interceptor-ref name="jsonValidationWorkflowStack"/> 
+            <interceptor-ref name="defaultStack" /> 
+         </interceptor-stack> 
+       </interceptors> 
+
+       <default-interceptor-ref name="appDefault" /> 
+       
+       <action name="formInput" class="action.blanker3.PersonAction" method="input">
+          <result name="input">/blanker3/personForm.jsp</result>
+        </action>
+        
+        <action name="personAction" class="action.blanker3.PersonAction">
+           
+           <result name="success">/blanker3/submissionResult.jsp</result>
+           <result name="input">/blanker3/personForm.jsp</result>
+        </action>
+        
+    </package>    
+    
+    <package name="four" namespace="/uiwidget" extends="struts-default">
+        <interceptors> 
+         <interceptor-stack name="appDefault"> 
+            <interceptor-ref name="timer" /> 
+            <interceptor-ref name="logger" /> 
+            <interceptor-ref name="defaultStack" /> 
+         </interceptor-stack> 
+       </interceptors> 
+
+       <default-interceptor-ref name="appDefault" />
+       
+       <action name="widgetInput" class="action.uiwidget.WidgetAction" method="input">
+           <result name="input">/uiwidget/widgetForm.jsp</result>
+       </action>
+       
+       <action name="widgetAction" class="action.uiwidget.WidgetAction">
+           <result name="success">/uiwidget/widgetResult.jsp</result>
+           <result name="input">/uiwidget/widgetForm.jsp</result>
+       </action>
+       
+    </package>
+    
+    <package name="five" namespace="/fileUpload" extends="struts-default">
+        <interceptors> 
+         <interceptor-stack name="appDefault"> 
+            <interceptor-ref name="timer" /> 
+            <interceptor-ref name="logger" /> 
+            <interceptor-ref name="defaultStack" /> 
+         </interceptor-stack> 
+       </interceptors> 
+
+       <default-interceptor-ref name="appDefault" />
+    
+        <action name="formInput" class="action.upload.FileUploadAction" method="input"> <!-- this action is used to load properties file -->
+          <result name="input">/fileUpload/personForm.jsp</result>
+        </action>
+        
+        <action name="upload" class="action.upload.FileUploadAction">
+           <result name="success">/fileUpload/submissionResult.jsp</result>
+           <result name="input">/fileUpload/personForm.jsp</result>
+        </action>
+       
+    </package>
+    
+    
+
+</struts>
