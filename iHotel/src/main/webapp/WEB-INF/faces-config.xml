@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+    version="2.1">
+<application>
+    <resource-bundle>
+		<base-name>com.iHotel.bundle.locale</base-name>
+		<var>bundle</var>
+	</resource-bundle>
+	<locale-config>
+		<default-locale>en</default-locale>
+		<supported-locale>ms_my</supported-locale>
+	</locale-config>
+</application>
+
+<navigation-rule>
+	<description></description>
+	<from-view-id>/WEB-INF/template/bodyTemplate.xhtml</from-view-id>
+	<navigation-case>
+		<from-outcome>home</from-outcome>
+		<to-view-id>/pages/home.xhtml</to-view-id>
+	</navigation-case>
+	<navigation-case>
+		<from-outcome>rooms</from-outcome>
+		<to-view-id>/pages/rooms.xhtml</to-view-id>
+	</navigation-case>
+</navigation-rule>
+
+
+</faces-config>

@@ -1,0 +1,103 @@
+HomeGallery
+-id : int
+-title1 : varchar(50)
+-title2 : varchar(50)
+-img_path : varchar(500)
+-is_displayed : boolean
+-created_dt : timestamp
+-updated_dt : timestamp
+-created_by : varchar(50)
+-updated_by : varchar(50)
+
+RoomType
+-id : int
+-name : varchar(15)
+-room_amt : int
+-title_en : varchar(100)
+-title_ms_my : varchar(100)
+//-image_path : varchar(500)
+-desc_en : text
+-desc_ms_my : text
+-is_displayed : boolean;
+-is_deleted : boolean
+-created_dt : timestamp
+-updated_dt : timestamp
+-created_by : varchar(50)
+-updated_by : varchar(50)
+
+RoomTypeGallery
+-id : int
+-room_type_id : int
+-img_path : varchar(500)
+
+Rooms
+-id : int
+-room_type_id : int //room number pattern: [room_type_id]-[room_amt]
+-is_assigned : boolean
+-reservation_id : int
+-is_deleted : boolean
+-created_dt : timestamp
+-updated_dt : timestamp
+-created_by : varchar(50)
+-updated_by : varchar(50)
+
+
+Reservation
+-id : int 
+-reservation_code : alphanumeric
+-guess_id : int
+//-room_amount : int//calculated from rooms amount
+-checkin_dt : datetime
+-checkout_dt : datetime
+-created_dt : datetime
+-created_by : varchar(25)
+-updated_dt : datetime
+-updated_by : varchar(25)
+
+//once checked out, record from reservation table will be deleted and moved to reservation history table
+
+ReservationHistory
+-id : int
+-reservation_id : int //just for record only
+-reservation_code : alphanumeric
+-guess_id : int
+//-room_type_id : int
+//-room_assigned_no : int //room number pattern: [room_type_id]-[room_amt]
+//-room_amount : int //calculated from room_assigned_no
+-checkin_dt : datetime
+-checkout_dt : datetime
+-status : varchar (15)
+-note : text
+-created_dt : datetime
+-created_by : varchar(25)
+-updated_dt : datetime //only note can be updated
+-updated_by : varchar(25)
+
+ReservationHistoryRoom //manytomany table reservation_history - rooms 
+-id : int
+-reservation_hist_id : int
+-room_id : int
+
+Guess
+-id:int
+-first name:varchar(100)
+-last name:varchar(100)
+-email:varchar(100)
+//-password:varchar(1000)
+-mobile:varchar(50)
+-ic:varchar(50)
+-icCountry:varchar(50)
+-address:varchar(100)
+-city:varchar(50)
+-state:varchar(50)
+-zip code:varchar(10)
+-country:varchar(50)
+-gender:char
+
+AdminUser
+-id : int
+-user_id : varchar(25) //currently only 1 user admin
+-password : varchar(225)
+-first_name : varchar(50)
+-last_name : varchar(50)
+-ic : varchar(50) 

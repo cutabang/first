@@ -1,0 +1,4 @@
+-create table for Contact Us
+-create table for customer rate feedback
+-display new contact us feed into admin page in facebook like notification
+-display customer rate feedback inside dashboard in admin page 

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      lang="#{languageManagedBean.locale}">
+      
+<f:view locale="#{languageManagedBean.locale}">
+
+<h:head>
+<title>The iHotel</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'/>
+<link href="../../resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../../resources/js/jquery.min.js"></script>
+
+<!-- <link type="text/css" rel="stylesheet" href="../../resources/css/JFGrid.css" /> -->
+<link type="text/css" rel="stylesheet" href="../../resources/css/JFFormStyle-1.css" />
+		<script type="text/javascript" src="../../resources/js/JFCore.js"></script>
+		<script type="text/javascript" src="../../resources/js/JFForms.js"></script>
+		<!-- Set here the key for your domain in order to hide the watermark on the web server -->
+		<script type="text/javascript">
+			(function() {
+				JC.init({
+					domainKey: ''
+				});
+				})();
+		</script>
+<!--nav-->
+<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 &amp;&amp; menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+</script>
+
+
+</h:head>
+
+<h:body>
+	<!-- start header -->
+<div class="header_bg">
+<div class="wrap">
+	<div class="header">
+		<div class="logo">
+			<a href="index.html"><img src="../../images/logo.png" alt=""/></a>
+		</div>
+		<div class="h_right">
+			<!--start menu -->
+			<ul class="menu">
+				<li class="active"><h:link outcome="/pages/home" value="#{bundle['iHOtel.header.menu.hotel']}"/> </li> |
+				<li><h:link outcome="/pages/rooms" value="#{bundle['iHOtel.header.menu.room']}"/></li> |
+				<li><h:link outcome="/pages/reservation" value="#{bundle['iHOtel.header.menu.reservation']}"/></li> |
+				<li><h:link outcome="/pages/activities" value="#{bundle['iHOtel.header.menu.activities']}"/></li> |
+				<li><h:link outcome="/pages/contact" value="#{bundle['iHOtel.header.menu.contact']}"/></li>
+				<div class="clear"></div>
+			</ul>
+<!-- 			start profile_details -->
+                    <h:form styleClass="style-1 drp_dwn" id="form">
+						<div class="row">
+							<div class="grid_3 columns">
+							    <h:selectOneMenu styleClass="custom-select" id="select1" value="#{languageManagedBean.localeCode}"
+							                     onchange="submit()" valueChangeListener="#{languageManagedBean.languageChangeListener}">
+							          <f:selectItem itemValue="en" itemLabel="English"/>
+							          <f:selectItem itemValue="ms_my" itemLabel="Malay"/>
+<!-- 							          <f:selectItem itemValue="zh" itemLabel="Chinese"/> -->
+							    </h:selectOneMenu>
+							</div>		
+						</div>		
+					</h:form>
+		</div>
+		<div class="clear"></div>
+		<div class="top-nav">
+		<nav class="clearfix">
+				<ul>
+				<li class="active"><h:link outcome="/pages/home" value="#{bundle['iHOtel.header.menu.hotel']}"/> </li> |
+				<li><h:link outcome="/pages/rooms" value="#{bundle['iHOtel.header.menu.room']}"/></li> |
+				<li><h:link outcome="/pages/reservation" value="#{bundle['iHOtel.header.menu.reservation']}"/></li> |
+				<li><h:link outcome="/pages/activities" value="#{bundle['iHOtel.header.menu.activities']}"/></li> |
+				<li><h:link outcome="/pages/contact" value="#{bundle['iHOtel.header.menu.contact']}"/></li>
+				</ul>
+				<a href="#" id="pull">Menu</a>
+			</nav>
+		</div>
+	</div>
+</div>
+</div>
+
+<ui:insert name="clientMainSection">Main Section</ui:insert>
+
+<div class="footer_bg">
+<div class="wrap">
+<div class="footer">
+			<div class="copy">
+				<p class="link"><span>© All rights reserved </span></p>
+			</div>
+			<div class="f_nav">
+				<ul>
+					<li><h:link outcome="/pages/home" value="#{bundle['iHOtel.header.menu.hotel']}"/></li>
+					<li><h:link outcome="/pages/rooms" value="#{bundle['iHOtel.header.menu.room']}"/></li>
+					<li><h:link outcome="/pages/reservation" value="#{bundle['iHOtel.header.menu.reservation']}"/></li>
+					<li><h:link outcome="/pages/contact" value="#{bundle['iHOtel.header.menu.contact']}"/></li>
+				</ul>
+			</div>
+			<div class="soc_icons">
+				<ul>
+					<li><a class="icon1" href="#"></a></li>
+					<li><a class="icon2" href="#"></a></li>
+					<li><a class="icon3" href="#"></a></li>
+					<li><a class="icon4" href="#"></a></li>
+					<li><a class="icon5" href="#"></a></li>
+					<div class="clear"></div>
+				</ul>	
+			</div>
+			<div class="clear"></div>
+</div>
+</div>
+</div>
+</h:body>
+</f:view>
+</html>
